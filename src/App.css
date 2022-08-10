@@ -72,13 +72,23 @@
   color: black;
 }
 
-.temp {
-  height: 100%;
+.Portfolio-1 {
+  height: 45%;
   background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  color: black;
+}
+
+.Portfolio-2 {
+  height: 45%;
+  background-color: #fcfeff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
   color: black;
 }
 
@@ -127,6 +137,11 @@
 
 .App-cat {
   height: 90vmin;
+  pointer-events: none;
+}
+
+.App-portfolio {
+  height: 35vmin;
   pointer-events: none;
 }
 

@@ -6,6 +6,9 @@ import catgif from './assets/cat.gif';
 import email from './assets/email.png';
 import github from './assets/github.png';
 import linkedin from './assets/linkedin.png';
+import app from './assets/App.png';
+import lullaby from './assets/lullaby.png';
+import same from './assets/same.png';
 import './App.css';
 
 const audioList1 = [
@@ -114,21 +117,41 @@ function App(props) {
       </div>
 
       <div className="App">
-        <div className="temp">
+        <div className="App-top-1">
           <h4>Portfolio</h4>
+        </div>
+        <div className="Portfolio-2">
+          <img src={app} className="App-portfolio" alt=""/>
+          <h6>Social media mobile application with location tracking</h6>
+        </div>
+        <div className="Portfolio-1">
+          <img src={lullaby} className="App-portfolio" alt=""/>
+          <h6>Simple HTML, CSS, JS website that syncs violin clips</h6>
         </div>
       </div>
 
       <div className="App">
-        <div className="temp">
+        <div className="Portfolio-1">
+          <img src={same} className="App-portfolio" alt=""/>
+          <h6>React and bootstrap website with animations and music</h6>
+        </div>
+        <div className="Portfolio-2">
+          More projects coming soon!
+        </div>
+        <div className="App-top-1">
         <h4>Portfolio</h4>
         </div>
       </div>
 
       <div className="App">
         <div className='Cat-top'>
-          <h4>Hey, you found the cat!</h4>
-          <h4>Shh, it's still sleeping</h4>
+          <h4>Curiosity finds the cat!</h4>
+          <h4>Maybe you got here accidentally, but..</h4>
+          <h4>that's part of the adventure!</h4>
+          <h4>It could be a skip, a stumble,</h4>
+          <h4>or a leap of faith.</h4>
+          <h4>And maybe..</h4>
+          <h4>something amazing will happen.</h4>
         </div>
         <div className='Corner'>
           <h5>| Pull</h5>
