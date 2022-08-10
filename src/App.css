@@ -1,38 +1,228 @@
+* {    
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
 .App {
-  text-align: center;
+  font-size: calc(30px + 3vmin);
+  font-family: LeoFont;
+  font-weight: normal;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App-top-1 {
+  height: 10%;
+  background-color: #e5eef3;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-evenly;
+  font-size: calc(25px + 3vmin);
+  color: black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App-top-2 {
+  height: 10%;
+  background-color: #e5eef3;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  color: crimson;
 }
 
-.App-header {
-  background-color: #282c34;
+.App-top-3 {
+  height: 10%;
+  text-decoration: underline;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-evenly;
+  font-size: calc(25px + 3vmin);
+  color: black;
+}
+
+.App-center {
+  height: 20%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: black;
+}
+
+.App-center-2 {
+  height: 30%;
+  background-color: #fcfeff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: black;
+}
+
+.App-title {
+  height: 60%;
+  background-color: #fcfeff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: black;
+}
+
+.temp {
+  height: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: black;
+}
+
+.Cat-center {
+  background-color: black;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.Cat-top {
+  height: 85%;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.Corner {
+  height:15%;
+  display: block;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  color: crimson;
+}
+
+.Gray-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: gray;
+}
+
+.App-avatar {
+  height: 60vmin;
+  pointer-events: none;
+}
+
+.App-cat {
+  height: 90vmin;
+  pointer-events: none;
+}
+
+.Icons {
+  background-color: #e5eef3;
+  height: 5vmin;
+}
+
+html {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+html body {
+  padding: 0;
+  margin: 0;
+  overflow-x: inherit;
+}
+
+a {
+  background-image: linear-gradient(
+    to right,
+    #54b3d6,
+    #a0def5 50%,
+    #000 50%
+  );
+  text-decoration: none;
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  padding: 5px 0;
+  position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+a:before {
+  content: '';
+  background: linear-gradient(
+    to right,
+    #54b3d6,
+    #a0def5 80%,
+    rgb(89, 32, 32) 20%
+  );
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+ background-position: 0;
+}
+
+a:hover::before {
+  width:100%;
+}
+
+.wrapper{
+  align-items: center;
+  box-sizing: content-box;
+  background-color: #fcfeff;
+  height: 70px;
+  padding: 50px 30px;
+  display: flex;
+  gap: 10px;
+  border-radius: 0px;
+}
+
+.words{
+  height:50px;
+  overflow: hidden;
+}
+
+span{
+  display: block;
+  height: 100%;
+  padding-left: 10px;
+  color: #54b3d6;
+  animation: spin_words 15s infinite;
+}
+@keyframes spin_words{
+  0%{
+    transform: translateY(0%);
   }
-  to {
-    transform: rotate(360deg);
+  25%{
+    transform: translateY(-100%);
+  }
+  50%{
+    transform: translateY(-200%);
+  }
+  75%{
+    transform: translateY(-100%);
   }
 }
