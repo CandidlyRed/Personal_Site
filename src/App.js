@@ -9,15 +9,48 @@ import linkedin from './assets/linkedin.png';
 import app from './assets/App.png';
 import lullaby from './assets/lullaby.png';
 import same from './assets/same.png';
+import Player from './player/player';
+import { songsdata } from './player/audio';
+import { useRef, useState, useEffect } from 'react';
 import './App.css';
 
 function App(props) {
+  const [songs, setSongs] = useState(songsdata);
+  const [isplaying, setisplaying] = useState(false);
+  const [currentSong, setCurrentSong] = useState(songsdata[1]);
+
+  const audioElem = useRef();
+
+  useEffect(() => {
+    if (isplaying) {
+      audioElem.current.play();
+    } else {
+      audioElem.current.play();
+    }
+    
+  }, [isplaying])
+
+  // useEffect(() => {
+  //   if(!isplaying){
+  //     audioElem.current.pause();
+  //   }
+
+  // }, [isplaying])
+  
+  const onPlaying = () => {
+    const duration = audioElem.current.duration;
+    const ct = audioElem.current.currentTime;
+
+    setCurrentSong({ ...currentSong, "progress": ct / duration * 100, "length": duration })
+
+  }
+
   const [dimensions, setWindowSize] = React.useState({ 
     height: window.innerHeight,
     width: window.innerWidth
   })
 
-  React.useEffect(() => {
+  useEffect(() => {
     function handleResize() {
       setWindowSize({
         height: window.innerHeight,
@@ -33,7 +66,8 @@ function App(props) {
   });
 
   return (
-    <HTMLFlipBook width={.5*dimensions.width} height={dimensions.height}>
+    <>
+    <HTMLFlipBook width={.5 * dimensions.width} height={dimensions.height}>
       <div className="App">
         <div className="App-top-1">
           <a href="https://github.com/CandidlyRed">
@@ -50,15 +84,15 @@ function App(props) {
           </a>
         </div>
         <div className="App-title">
-            <h2>Hello, world! I'm Leo</h2>
-            <div className="wrapper">
-              Software Engineer: {" "}
-              <div className="words">
-                <span>Frontend Dev</span>
-                <span>Data Metrics</span>
-                <span>Mobile App Dev</span>
-              </div>
+          <h2>Hello, world! I'm Leo</h2>
+          <div className="wrapper">
+            Software Engineer: {" "}
+            <div className="words">
+              <span>Frontend Dev</span>
+              <span>Data Metrics</span>
+              <span>Mobile App Dev</span>
             </div>
+          </div>
         </div>
         <div className="App-top-3">
           <h3>About Me:</h3>
@@ -72,30 +106,30 @@ function App(props) {
       </div>
 
       <div className="App">
-        <div className="App-music"></div>
+        <div className="App-righttop">
+          <h2>Pull or Click for Portfolio |</h2>
+        </div>
         <div className="App-title">
-          <img src={avatar} className="App-avatar" alt="avatar"/>
+          <img src={avatar} className="App-avatar" alt="avatar" />
         </div>
-        <div className="App-top-2">
-          <h3>Pull or Click for Portfolio |</h3>
-        </div>
+        <div className="App-top-2"></div>
       </div>
 
       <div className="App">
         <div className="App-top-4">
           <h4>Portfolio</h4>
         </div>
-        
+
         <div className="Portfolio-2">
           <h6>Back to Hue: Location based social media app</h6>
           <a href="https://github.com/jeevanprakash0814/Back-to-Hue-Frontend">
-            <img src={app} className="App-portfolio" alt=""/>
+            <img src={app} className="App-portfolio" alt="" />
           </a>
         </div>
         <div className="Portfolio-1">
           <h6>Lullaby: Game to create unique melodies </h6>
           <a href="https://candidlyred.github.io/">
-            <img src={lullaby} className="App-portfolio" alt=""/>
+            <img src={lullaby} className="App-portfolio" alt="" />
           </a>
         </div>
       </div>
@@ -103,19 +137,21 @@ function App(props) {
       <div className="App">
         <div className="Portfolio-1">
           <h6>Personal website with animations and music </h6>
-          <a href="">
-            <img src={same} className="App-portfolio" alt=""/>
+          <a href="https://github.com/CandidlyRed/Personal_Site">
+            <img src={same} className="App-portfolio" alt="" />
           </a>
         </div>
         <div className="Portfolio-2">
           More projects coming soon!
         </div>
         <div className="App-top-5">
-          <h4>Portfolio</h4>
         </div>
       </div>
 
       <div className="App">
+        <div className='Corner'>
+          <h5>| Pull</h5>
+        </div>
         <div className='Cat-top'>
           <h4>Curiosity finds the cat!</h4>
           <h4>Maybe you got here accidentally, but..</h4>
@@ -125,9 +161,6 @@ function App(props) {
           <h4>And maybe..</h4>
           <h4>something amazing will happen.</h4>
         </div>
-        <div className='Corner'>
-          <h5>| Pull</h5>
-        </div>
       </div>
 
       <div className="App">
@@ -136,6 +169,11 @@ function App(props) {
         </div>
       </div>
     </HTMLFlipBook>
+    <div className="music">
+      <audio src={currentSong.url} ref={audioElem} onTimeUpdate={onPlaying} />
+      <Player songs={songs} setSongs={setSongs} isplaying={isplaying} setisplaying={setisplaying} audioElem={audioElem} currentSong={currentSong} setCurrentSong={setCurrentSong} />
+    </div>
+    </>
   );
 }
 
