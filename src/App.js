@@ -11,41 +11,6 @@ import lullaby from './assets/lullaby.png';
 import same from './assets/same.png';
 import './App.css';
 
-const audioList1 = [
-  {
-    name: 'To a Friend',
-    singer: 'Candidly',
-    cover:
-      'https://i.ytimg.com/vi/GLwE0-3hln8/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG\u0026rs=AOn4CLBrS7ArnQBKahHzIfHrKIUb1IIhzQ',
-    musicSrc:
-      'https://res.cloudinary.com/dlupwiavd/video/upload/v1660062728/To_a_friend_dkci89.mp3',
-  },
-  {
-    name: 'Improv - "Canvas"',
-    singer: 'Candidly',
-    cover:
-      'https://i.ytimg.com/vi/ajU75l0_rJs/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG\u0026rs=AOn4CLAUco2OJi46W6tw1mUpKWfiLIZOkg',
-    musicSrc:
-      'https://res.cloudinary.com/dlupwiavd/video/upload/v1660063192/Improv_-_Canvas_-_83021__getmp3.pro_zdh89n.mp3',
-  },
-  {
-    name: 'Improv - "Orange"',
-    singer: 'Candidly',
-    cover:
-      'https://i.ytimg.com/vi/UGHx86fdP84/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG\u0026rs=AOn4CLAektetnYSr5HOquDOhDiYGL3IEJA',
-    musicSrc:
-      'https://res.cloudinary.com/dlupwiavd/video/upload/v1660063146/Improv_-_Orange_-_72422__getmp3.pro_uybhay.mp3',
-  },
-  {
-    name: 'Dehydration',
-    singer: 'Candidly',
-    cover:
-      'https://i.ytimg.com/vi/qIG8TGsl1q8/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG\u0026rs=AOn4CLAwbwt4W_rbJNpclFBi28sAoqpZig',
-    musicSrc:
-      'https://res.cloudinary.com/dlupwiavd/video/upload/v1660062753/Dehydration_xytkd7.mp3',
-  },
-]
-
 function App(props) {
   const [dimensions, setWindowSize] = React.useState({ 
     height: window.innerHeight,
@@ -112,7 +77,7 @@ function App(props) {
           <img src={avatar} className="App-avatar" alt="avatar"/>
         </div>
         <div className="App-top-2">
-          <h5>Pull or Click for Portfolio |</h5>
+          <h3>Pull or Click for Portfolio |</h3>
         </div>
       </div>
 
