@@ -85,13 +85,6 @@ function App(props) {
           </a>
         </div>
         <div className="App-title">
-          <img src={avatar} className="App-avatar" alt="avatar"/>
-        </div>
-        <div className="App-center-2"></div>
-      </div>
-
-      <div className="App">
-        <div className="App-title">
             <h2>Hello, world! I'm Leo</h2>
             <div className="wrapper">
               Software Engineer: {" "}
@@ -111,35 +104,49 @@ function App(props) {
             <h5>I like to learn stuff. I love to make stuff!</h5>
           </div>
         </div>
+      </div>
+
+      <div className="App">
+        <div className="App-music"></div>
+        <div className="App-title">
+          <img src={avatar} className="App-avatar" alt="avatar"/>
+        </div>
         <div className="App-top-2">
           <h5>Pull or Click for Portfolio |</h5>
         </div>
       </div>
 
       <div className="App">
-        <div className="App-top-1">
+        <div className="App-top-4">
           <h4>Portfolio</h4>
         </div>
+        
         <div className="Portfolio-2">
-          <img src={app} className="App-portfolio" alt=""/>
-          <h6>Social media mobile application with location tracking</h6>
+          <h6>Back to Hue: Location based social media app</h6>
+          <a href="https://github.com/jeevanprakash0814/Back-to-Hue-Frontend">
+            <img src={app} className="App-portfolio" alt=""/>
+          </a>
         </div>
         <div className="Portfolio-1">
-          <img src={lullaby} className="App-portfolio" alt=""/>
-          <h6>Simple HTML, CSS, JS website that syncs violin clips</h6>
+          <h6>Lullaby: Game to create unique melodies </h6>
+          <a href="https://candidlyred.github.io/">
+            <img src={lullaby} className="App-portfolio" alt=""/>
+          </a>
         </div>
       </div>
 
       <div className="App">
         <div className="Portfolio-1">
-          <img src={same} className="App-portfolio" alt=""/>
-          <h6>React and bootstrap website with animations and music</h6>
+          <h6>Personal website with animations and music </h6>
+          <a href="">
+            <img src={same} className="App-portfolio" alt=""/>
+          </a>
         </div>
         <div className="Portfolio-2">
           More projects coming soon!
         </div>
-        <div className="App-top-1">
-        <h4>Portfolio</h4>
+        <div className="App-top-5">
+          <h4>Portfolio</h4>
         </div>
       </div>
 

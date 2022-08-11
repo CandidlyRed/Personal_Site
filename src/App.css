@@ -7,6 +7,7 @@
   font-size: calc(30px + 3vmin);
   font-family: LeoFont;
   font-weight: normal;
+  background-color: #fcfeff;
 }
 
 .App-top-1 {
@@ -21,19 +22,60 @@
 }
 
 .App-top-2 {
-  height: 10%;
+  height: 20%;
   background-color: #e5eef3;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   justify-content: center;
   color: crimson;
+  overflow:hidden;
 }
 
 .App-top-3 {
   height: 10%;
+  clip-path: polygon(
+    0 0,
+    87.5% 0,
+    100% 100%,
+    0 100%
+  );
   text-decoration: underline;
-  background-color: #ffffff;
+  background-color: #eff4f8;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-evenly;
+  font-size: calc(25px + 3vmin);
+  color: black;
+}
+
+.App-top-4 {
+  height: 10%;
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    87.5% 100%,
+    0 100%
+  );
+  background-color: #e5eef3;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-evenly;
+  font-size: calc(25px + 3vmin);
+  color: black;
+}
+
+.App-top-5 {
+  height: 10%;
+  clip-path: polygon(
+    12.5% 0,
+    100% 0,
+    100% 100%,
+    0 100%
+  );
+  background-color: #e5eef3;
   display: flex;
   flex-direction: row;
   align-items: flex-end;
@@ -44,7 +86,7 @@
 
 .App-center {
   height: 20%;
-  background-color: white;
+  background-color: #eff4f8;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -53,8 +95,8 @@
 }
 
 .App-center-2 {
-  height: 30%;
-  background-color: #fcfeff;
+  height: 60%;
+  background-color: #eff4f8;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -65,6 +107,23 @@
 .App-title {
   height: 60%;
   background-color: #fcfeff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: black;
+}
+
+.App-music {
+  height: 20%;
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    12.5% 100%,
+    0 50%
+  );
+  background-color: #eff4f8;
   display: flex;
   flex-direction: column;
   align-items: center;
