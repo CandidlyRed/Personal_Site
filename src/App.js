@@ -25,17 +25,10 @@ function App(props) {
     if (isplaying) {
       audioElem.current.play();
     } else {
-      audioElem.current.play();
+      audioElem.current.pause();
     }
     
   }, [isplaying])
-
-  // useEffect(() => {
-  //   if(!isplaying){
-  //     audioElem.current.pause();
-  //   }
-
-  // }, [isplaying])
   
   const onPlaying = () => {
     const duration = audioElem.current.duration;
