@@ -14,7 +14,7 @@ import { songsdata } from './player/audio';
 import { useRef, useState, useEffect } from 'react';
 import './App.css';
 
-function App(props) {
+const Music = () => {
   const [songs, setSongs] = useState(songsdata);
   const [isplaying, setisplaying] = useState(false);
   const [currentSong, setCurrentSong] = useState(songsdata[1]);
@@ -38,6 +38,15 @@ function App(props) {
 
   }
 
+  return (
+    <div className="music">
+      <audio src={currentSong.url} ref={audioElem} onTimeUpdate={onPlaying} />
+      <Player songs={songs} setSongs={setSongs} isplaying={isplaying} setisplaying={setisplaying} audioElem={audioElem} currentSong={currentSong} setCurrentSong={setCurrentSong} />
+    </div>
+  );
+}
+
+const Page = () => {
   const [dimensions, setWindowSize] = React.useState({ 
     height: window.innerHeight,
     width: window.innerWidth
@@ -59,7 +68,6 @@ function App(props) {
   });
 
   return (
-    <>
     <HTMLFlipBook width={.5 * dimensions.width} height={dimensions.height}>
       <div className="App">
         <div className="App-top-1">
@@ -162,14 +170,16 @@ function App(props) {
         </div>
       </div>
     </HTMLFlipBook>
-    <div className="music">
-      <audio src={currentSong.url} ref={audioElem} onTimeUpdate={onPlaying} />
-      <Player songs={songs} setSongs={setSongs} isplaying={isplaying} setisplaying={setisplaying} audioElem={audioElem} currentSong={currentSong} setCurrentSong={setCurrentSong} />
-    </div>
-    </>
   );
 }
 
 ReactDOM.render(<App />, document.getElementById("root"));
 
-export default App;
+export default function App() {
+  return (
+    <div>
+      <Page/>
+      <Music/>
+    </div>
+  );
+}
