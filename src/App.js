@@ -7,7 +7,7 @@ import email from './assets/email.png';
 import github from './assets/github.png';
 import linkedin from './assets/linkedin.png';
 import app from './assets/App.png';
-import lullaby from './assets/lullaby.png';
+import melody from './assets/melody.png';
 import same from './assets/same.png';
 import Player from './player/player';
 import { songsdata } from './player/audio';
@@ -128,9 +128,9 @@ const Page = () => {
           </a>
         </div>
         <div className="Portfolio-1">
-          <h6>Lullaby: Game to create unique melodies </h6>
-          <a href="https://candidlyred.github.io/">
-            <img src={lullaby} className="App-portfolio" alt="" />
+          <h6> Melody Project: Game to create unique melodies </h6>
+          <a href="https://melodyproject.vercel.app/">
+            <img src={melody} className="App-portfolio" alt="" />
           </a>
         </div>
       </div>
