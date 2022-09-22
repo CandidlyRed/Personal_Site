@@ -1,5 +1,5 @@
 import React from "react";
-// import ReactDOM from "react-dom";
+import ReactDOM from "react-dom";
 import { createRoot } from 'react-dom/client';
 import HTMLFlipBook from 'react-pageflip';
 import avatar from './assets/Me.png';
@@ -174,10 +174,7 @@ const Page = () => {
   );
 }
 
-// ReactDOM.render(<App />, document.getElementById("root"));
-const container = document.getElementById('root');
-const root = createRoot(container);
-root.render(<App />);
+ReactDOM.render(<App />, document.getElementById("root"));
 
 export default function App() {
   return (
