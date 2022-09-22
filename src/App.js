@@ -69,7 +69,7 @@ const Page = () => {
   });
 
   return (
-    <HTMLFlipBook width={.5 * dimensions.width} height={dimensions.height}>
+    <HTMLFlipBook width={.5 * dimensions.width} height={dimensions.height} id="root">
       <div className="App">
         <div className="App-top-1">
           <a href="https://github.com/CandidlyRed">
