@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import HTMLFlipBook from 'react-pageflip';
 import avatar from './assets/Me.png';
 import catgif from './assets/cat.gif';
@@ -173,7 +172,7 @@ const Page = () => {
   );
 }
 
-ReactDOM.render(<App />, document.getElementById("root"));
+// ReactDOM.render(<App />, document.getElementById("root"));
 
 export default function App() {
   return (
