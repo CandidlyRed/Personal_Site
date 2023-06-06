@@ -8,7 +8,8 @@ import github from './assets/github.png';
 import linkedin from './assets/linkedin.png';
 import app from './assets/App.png';
 import melody from './assets/melody.png';
-import same from './assets/same.png';
+import same from './assets/memorybox.jpg';
+import roomba from './assets/roomba.png'
 import Player from './player/player';
 import { songsdata } from './player/audio';
 import { useRef, useState, useEffect } from 'react';
@@ -79,7 +80,7 @@ const Page = () => {
             Linkedin {" "}
             <img src={linkedin} className="Icons" alt="" />
           </a>
-          <a href="mailto:cui00103@umn.edu">
+          <a href="mailto:leozhenglucui@gmail.com">
             Contact {" "}
             <img src={email} className="Icons" alt="" />
           </a>
@@ -89,9 +90,11 @@ const Page = () => {
           <div className="wrapper">
             Software Engineer: {" "}
             <div className="words">
-              <span>Frontend Dev</span>
-              <span>Data Metrics</span>
-              <span>Mobile App Dev</span>
+              <span>Full Stack</span>
+              <span>Data Analytics</span>
+              <span>Mobile Dev</span>
+              <span>HCI</span>
+              <span>Computer Vision</span>
             </div>
           </div>
         </div>
@@ -100,8 +103,9 @@ const Page = () => {
         </div>
         <div className="App-center">
           <div className="Gray-text">
-            <h5>Computer science student from Minnesota.</h5>
-            <h5>I like to learn stuff. I love to make stuff!</h5>
+            <h6>I'm looking to work in fast paced team environments</h6>
+            <h6>to solidify my foundation as a software developer.</h6>
+            <h6>Happy to learn and collaborate!</h6>
           </div>
         </div>
       </div>
@@ -137,13 +141,16 @@ const Page = () => {
 
       <div className="App">
         <div className="Portfolio-1">
-          <h6>Personal website with animations and music </h6>
-          <a href="https://github.com/CandidlyRed/Personal_Site">
+          <h6>Memory Box: Full stack music product for Rasperian Devices </h6>
+          <a href="https://github.com/CandidlyRed/spotify">
             <img src={same} className="App-portfolio" alt="" />
           </a>
         </div>
         <div className="Portfolio-2">
-          More projects coming soon!
+          <h6>Roomba Computer Vision: YOLO object decection IoT</h6>
+          <a href="https://www.youtube.com/watch?v=ixRVW7YHUho">
+            <img src={roomba} className="App-portfolio" alt="" />
+          </a>
         </div>
         <div className="App-top-5">
         </div>
